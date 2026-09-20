@@ -2,14 +2,33 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Задание 1 — Гиперссылки и форма</title>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 и 2 — Гиперссылки,таблица и форма</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo"  href="#links" aria-label="Главная страница">
+            <img src="Логотип_КубГУ.png">
+        </a>
+
+        <div class="site-title">Задание 1 и 2</div>
+
+        <nav class="main-nav" aria-label="Основное меню">
+            <a href="#links">Список ссылок</a>
+            <a href="#table-section">Таблица</a>
+            <a href="#form-section">Форма</a>
+        </nav>
+    </div>
+</header>
+<main class="content">
+<section id = "links" class="content-block">
     <h1>Задание 1: Гиперссылки и форма</h1>
-    <h2>Список гиперссылок</h2>
+    <h2 >Список гиперссылок</h2>
     <ul>
         <!-- 1) Абсолютная гиперссылка на главную страницу сайта kubsu.ru -->
         <li>
@@ -140,9 +159,57 @@
             <a href="ftp://user:password@ftp.example.com/file.txt">21. Ссылка на файл на сервере FTP с авторизацией</a>
         </li>
     </ul>
+</section>
+<section id="table-section" class="content-block">
+    <h2>Таблица</h2>
+
+    <table>
+        <caption>Учебная таблица</caption>
+        <thead>
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+                <th>Колонка 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Ячейка 1–2</td>
+                <td>Ячейка 1–2</td>
+                <td colspan="2">Объединённые ячейки</td>
+            </tr>
+            <tr>
+                <td>Ячейка 2–2</td>
+                <td>Ячейка 2–3</td>
+                <td>Ячейка 2–4</td>
+            </tr>
+            <tr>
+                <td>Ячейка 3–1</td>
+                <td rowspan="2">Объединение по строкам</td>
+                <td>Ячейка 3–3</td>
+                <td>Ячейка 3–4</td>
+            </tr>
+            <tr>
+                <td>Ячейка 4–1</td>
+                <td colspan="2">Объединённые ячейки</td>
+            </tr>
+            <tr>
+                <td>Ячейка 5–1</td>
+                <td>Ячейка 5–2</td>
+                <td>Ячейка 5–3</td>
+                <td>Ячейка 5–4</td>
+            </tr>
+            <tr>
+                <td colspan="4">Итоговая строка таблицы</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
     <!-- ===================== ФОРМА ===================== -->
-    <h2 id="form-section">Форма</h2>
+        <section id="form-section" class="content-block">
+    <h2>Форма</h2>
     <form action="#" method="post">
 
         <!-- 1) ФИО (текстовое поле) -->
@@ -218,7 +285,12 @@
         </p>
 
     </form>
+    </section>
+
+</main>
+<footer class="site-footer">
+    (c) Рамиль Айтимов
+</footer>
 
 </body>
-
 </html>

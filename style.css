@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.4;
+    background: #ffffff;
+    color: #111111;
+}
+
+/* Шапка на всю ширину окна */
+.site-header {
+    width: 100%;
+    background: #44c4ff;
+    border-bottom: 1px solid #5d88b4;
+}
+
+/* Максимальная ширина контента и меню — 960px */
+.header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 90px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.logo img{
+    width: 72px;
+    height: 72px;
+}
+
+.site-title {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.main-nav {
+    margin-left: auto;
+    align-self: flex-start;
+    display: flex;
+    gap: 0;
+}
+
+.main-nav a {
+    color: #111;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    text-decoration: underline;
+}
+
+/* Основной контент по центру */
+.content {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-block {
+    margin: 0 0 28px;
+}
+
+.content-block h2 {
+    margin-top: 0;
+}
+
+/* Ссылка-якорь и список */
+.content-block ul {
+    padding-left: 25px;
+}
+
+.content-block li {
+    margin-bottom: 8px;
+}
+
+.logo-image {
+    display: inline-flex;
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #3e6c98;
+    background: #76a5d3;
+    color: #111;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #76a5d3;
+}
+
+/* Форма */
+form {
+    max-width: 650px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    max-width: 100%;
+    padding: 7px;
+    margin-top: 4px;
+    font: inherit;
+}
+
+textarea {
+    width: 100%;
+}
+
+fieldset {
+    margin: 15px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 8px 18px;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Подвал на всю ширину окна */
+.site-footer {
+    width: 100%;
+    min-height: 80px;
+    padding: 25px max(20px, calc((100% - 920px) / 2));
+    background: #76a5d3;
+    border-top: 1px solid #5d88b4;
+}
+
+/* На узких экранах меню переносится */
+@media (max-width: 700px) {
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        width: 100%;
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .main-nav a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
