@@ -166,22 +166,7 @@ button {
     border-top: 1px solid #5d88b4;
 }
 
-/* На узких экранах меню переносится */
-@media (max-width: 700px) {
-    .header-inner {
-        flex-wrap: wrap;
-    }
 
-    .main-nav {
-        width: 100%;
-        margin-left: 0;
-        flex-wrap: wrap;
-    }
-
-    .main-nav a {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
 
     table {
         display: block;
