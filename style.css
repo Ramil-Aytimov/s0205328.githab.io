@@ -46,21 +46,15 @@ body {
 
 .main-nav {
     margin-left: auto;
-    align-self: flex-start;
     display: flex;
-    gap: 0;
+    align-self: flex-start;
+    gap: 20px;
 }
 
 .main-nav a {
     color: #111;
     text-decoration: none;
     padding: 5px 12px;
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.main-nav a:hover,
-.main-nav a:focus {
-    text-decoration: underline;
 }
 
 /* Основной контент по центру */
@@ -81,30 +75,18 @@ body {
 
 /* Ссылка-якорь и список */
 .content-block ul {
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 .content-block li {
-    margin-bottom: 8px;
-}
-
-.logo-image {
-    display: inline-flex;
-    width: 70px;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 1px solid #3e6c98;
-    background: #76a5d3;
-    color: #111;
+    margin-bottom: 10px;
 }
 
 /* Таблица */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 caption {
@@ -115,7 +97,7 @@ caption {
 
 th,
 td {
-    border: 1px solid #333;
+    border: 1px solid #ff0000;
     padding: 10px;
     text-align: left;
     vertical-align: middle;
@@ -127,7 +109,7 @@ th {
 
 /* Форма */
 form {
-    max-width: 650px;
+    max-width: 960px;
 }
 
 input[type="text"],
@@ -164,12 +146,4 @@ button {
     padding: 25px max(20px, calc((100% - 920px) / 2));
     background: #76a5d3;
     border-top: 1px solid #5d88b4;
-}
-
-
-
-    table {
-        display: block;
-        overflow-x: auto;
-    }
 }
