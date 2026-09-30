@@ -24,14 +24,14 @@ body {
 
 /* Максимальная ширина контента и меню — 960px */
 .header-inner {
-    max-width: 960px;
-    margin: 0 auto;
+    width: 100%;
     min-height: 90px;
     padding: 12px 20px;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    position: relative;
+    gap: 15px;
 }
 
 .logo img{
@@ -45,24 +45,43 @@ body {
 }
 
 .main-nav {
-    margin-left: auto;
+    width: 100%;
+
     display: flex;
-    align-self: flex-start;
-    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .main-nav a {
     color: #111;
     text-decoration: none;
-    padding: 5px 12px;
+    padding: 8px 12px;
+
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+    text-align: center;
 }
 
 /* Основной контент по центру */
 .content {
     width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.table-section {
+    order: 1;
+}
+
+.links-section {
+    order: 2;
+}
+
+.form-section {
+    order: 3;
 }
 
 .content-block {
@@ -143,7 +162,58 @@ button {
 .site-footer {
     width: 100%;
     min-height: 80px;
-    padding: 25px max(20px, calc((100% - 920px) / 2));
+    padding: 25px 20px;
+
     background: #76a5d3;
     border-top: 1px solid #5d88b4;
+}
+
+@media (min-width: 768px) {
+
+    .header-inner {
+        max-width: 960px;
+        margin: 0 auto;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .main-nav {
+        width: auto;
+        margin-left: auto;
+
+        flex-direction: row;
+        align-self: flex-start;
+    }
+
+    .main-nav a {
+        padding: 5px 12px;
+
+        border-top: none;
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+
+        text-align: left;
+    }
+
+    .content {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .links-section {
+        order: 1;
+    }
+
+    .table-section {
+        order: 2;
+    }
+
+    .form-section {
+        order: 3;
+    }
+
+    .site-footer {
+        padding: 25px max(20px, calc((100% - 920px) / 2));
+    }
 }
