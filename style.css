@@ -2,14 +2,20 @@
     box-sizing: border-box;
 }
 
+
+/* Включает плавную прокрутку при переходе по якорным ссылкам. */
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    /* Убирает стандартные отступы браузера вокруг страницы. */
     margin: 0;
+    /* Задаёт шрифт. */
     font-family: Arial, sans-serif;
+    /* Размер обычного текста */
     font-size: 22px;
+    /* Высота строки */
     line-height: 1.4;
     background: #ffffff;
     color: #111111;
@@ -17,20 +23,27 @@ body {
 
 /* Шапка на всю ширину окна */
 .site-header {
+    /* вся ширина */
     width: 100%;
     background: #44c4ff;
+    /* тонкая линия снизу шапки */
     border-bottom: 1px solid #5d88b4;
 }
 
 /* Максимальная ширина контента и меню — 960px */
 .header-inner {
     width: 100%;
+    /* минимальная высота */
     min-height: 90px;
+    /* отступы сверху и снизу */
     padding: 12px 20px;
-
+/* Включает Flexbox. */
     display: flex;
+    /* На телефоне элементы располагаются вертикально */
     flex-direction: column;
+    /* Выравнивает элементы по центру.  */
     align-items: center;
+    /* Расстояние между элементами */
     gap: 15px;
 }
 
@@ -41,7 +54,8 @@ body {
 
 .site-title {
     font-size: 18px;
-    white-space: nowrap;
+    /* Запрещает переносить название на новую строку. */
+    white-space: center;
 }
 
 .main-nav {
@@ -49,16 +63,18 @@ body {
 
     display: flex;
     flex-direction: column;
+    /* Элементы растягиваются по ширине меню. */
     align-items: stretch;
 }
-
+/* Ссылки меню */
 .main-nav a {
     color: #111;
+    /* убирает подчеркивание ссылок */
     text-decoration: none;
     padding: 8px 12px;
-
-    border-left: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+     border-left: none;
+     /* Добавляет горизонтальную линию сверху каждой ссылки.  */
+     border-top: 1px solid rgb(255, 0, 0); 
 
     text-align: center;
 }
@@ -85,38 +101,50 @@ body {
 }
 
 .content-block {
+    /* нижний отступ */
     margin: 0 0 28px;
 }
 
 .content-block h2 {
+    /* убирает верхний внешнний отступ */
     margin-top: 0;
 }
 
 /* Ссылка-якорь и список */
 .content-block ul {
+    /* отступ слева */
     padding-left: 30px;
 }
 
 .content-block li {
+    /* нижний отступ */
     margin-bottom: 10px;
 }
 
 /* Таблица */
 table {
     width: 100%;
+    /* Объединяет соседние границы ячеек. */
     border-collapse: collapse;
+    /* отступ сверху */
     margin-top: 8px;
 }
-
+/* название таблицы */
 caption {
+    /* название слева */
     text-align: left;
+    /* жирный текст */
     font-weight: bold;
+    /* отступ между название и таблицей */
     margin-bottom: 8px;
 }
 
+/* ячейки таблицы */
 th,
 td {
+    /* граница */
     border: 1px solid #ff0000;
+    /* отступ внутри ячеек */
     padding: 10px;
     text-align: left;
     vertical-align: middle;
@@ -155,6 +183,7 @@ fieldset {
 button {
     padding: 8px 18px;
     font: inherit;
+    /* При наведении мыши курсор становится указателем. */
     cursor: pointer;
 }
 
@@ -172,8 +201,9 @@ button {
 
     .header-inner {
         max-width: 960px;
+        /* Центрирует блок */
         margin: 0 auto;
-
+/* Элементы теперь идут горизонтально, а не вертикально.  */
         flex-direction: row;
         align-items: center;
         gap: 20px;
@@ -181,6 +211,7 @@ button {
 
     .main-nav {
         width: auto;
+        /* меня на право */
         margin-left: auto;
 
         flex-direction: row;
@@ -189,8 +220,9 @@ button {
 
     .main-nav a {
         padding: 5px 12px;
-
+/* убирает горизонтальные линии. */
         border-top: none;
+        /* вертикальное разделение */
         border-left: 1px solid rgba(0, 0, 0, 0.2);
 
         text-align: left;
@@ -214,6 +246,6 @@ button {
     }
 
     .site-footer {
-        padding: 25px max(20px, calc((100% - 920px) / 2));
+        padding: 25px ;
     }
 }
