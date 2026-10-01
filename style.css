@@ -154,6 +154,20 @@ th {
     background: #76a5d3;
 }
 
+th {
+    background: #76a5d3;
+}
+
+tr:nth-child(even)
+{
+    background: #111111;
+}
+
+tr:nth-child(odd)
+{
+    background: #9dff00;
+}
+
 /* Форма */
 form {
     max-width: 960px;
@@ -200,7 +214,7 @@ button {
 @media (min-width: 768px) {
 
     .header-inner {
-        max-width: 960px;
+        width: 100%;
         /* Центрирует блок */
         margin: 0 auto;
 /* Элементы теперь идут горизонтально, а не вертикально.  */
