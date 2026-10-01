@@ -150,9 +150,7 @@ td {
     vertical-align: middle;
 }
 
-th {
-    background: #76a5d3;
-}
+
 
 th {
     background: #76a5d3;
@@ -160,7 +158,7 @@ th {
 
 tr:nth-child(even)
 {
-    background: #111111;
+    background: #ffe600;
 }
 
 tr:nth-child(odd)
